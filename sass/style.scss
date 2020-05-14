@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 @mixin logo {
   height: 4rem;
   width: 6rem;
+  text-align: center;
   position: absolute;
   top: 2%;
   left: 2%;
