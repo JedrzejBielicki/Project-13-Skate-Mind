@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACAA,AAAA,KAAK,CAAA;EAED,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,gBAAgB;EACxB,gBAAgB,EAAE,gBAAgB;CACrC",
     "sources": [
-        "../sass/style.scss"
+        "../sass/style.scss",
+        "../sass/_desktop-main.scss"
     ],
     "names": [],
     "file": "style.css"
