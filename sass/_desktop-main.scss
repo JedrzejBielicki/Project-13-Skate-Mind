@@ -6,4 +6,49 @@
   .logo {
     @include logo;
   }
+  header {
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    font-size: 3.5rem;
+    height: 25vh;
+    display: flex;
+    :nth-child(1){
+      padding-right: 20px;
+    }
+  }
+  p{
+    position: absolute;
+    top: 57%;
+    left: 12%;
+    height: 5vh;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  button{
+    position: absolute;
+    bottom: 17%;
+    left: 12%;
+    border: none;
+    border-radius: 15px 15px;
+    height: 7vh;
+    width: 25%;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #000;
+    color: white;
+  }
+  nav{
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    a{
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
 }
