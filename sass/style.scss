@@ -13,11 +13,17 @@
   left: 2%;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 399px) {
   @import "mobile-main";
   @import "mobile-about";
 }
+@media(max-width: 768px){
+  @import "tablet-main";
+  @import "tablet-about";
+}
 
 @media (min-width: 769px) {
-  @import "_desktop-main";
+  @import "desktop-main";
+  @import "desktop-about";
 }
