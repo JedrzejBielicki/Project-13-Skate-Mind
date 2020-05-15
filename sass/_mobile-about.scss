@@ -1,0 +1,32 @@
+.about{
+    height: 100vh;
+    background-image: url(/img/bgc-mobile-2.jpg);
+    color: white;
+    header{
+        text-align: center;
+        height: 10vh;
+        h2{
+            line-height: 10vh;
+        }
+    }
+    .description{
+        height: 30vh;
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5rem;
+    }
+    figure{
+        margin: 0;
+        padding: 0;
+        height: 60vh;
+        img{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            border-radius: 15px 15px;
+            transform: rotate(25deg) scale(0.8);
+        };
+       
+    }
+}
