@@ -16,6 +16,7 @@
     :nth-child(1){
       padding-right: 20px;
     }
+    animation: head-slide 2s ease;
   }
   p{
     position: absolute;
@@ -24,6 +25,7 @@
     height: 5vh;
     font-size: 3rem;
     font-weight: bold;
+    animation: head-slide 2s .5s ease both;
   }
   button{
     position: absolute;
@@ -37,6 +39,13 @@
     font-weight: bold;
     background-color: #000;
     color: white;
+    cursor: pointer;
+    transition: 1s;
+    animation: head-slide 2s .7s ease both;
+  }
+  button:hover{
+    background-color: #fff;
+    color: black;
   }
   nav{
     position: absolute;
@@ -50,5 +59,13 @@
       font-size: 1.2rem;
       font-weight: bold;
     }
+  }
+}
+@keyframes head-slide{
+  0%{
+      left: -100%;
+  }
+  100%{
+      left: 12%;
   }
 }

@@ -6,7 +6,12 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-@media (max-width: 399px) {
+.pic-animation {
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+@media (max-width: 419px) {
   .main {
     height: 100vh;
     width: 100%;
@@ -90,59 +95,36 @@
   }
   .about .description {
     height: 30vh;
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     line-height: 1.3rem;
     z-index: 1;
+    text-shadow: 0 0 8px black;
   }
   .about figure {
     margin: 0;
     padding: 0;
-    height: 60vh;
-    overflow: hidden;
+    height: 34vh;
     position: absolute;
-    bottom: -15%;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
     z-index: -1;
   }
-  .about figure img {
+  .about figure .park-img {
     width: 100%;
     padding: 0;
     margin: 0;
     border-radius: 15px 15px;
-    -webkit-transform: translateY(10%) rotate(25deg) scale(0.7);
-            transform: translateY(10%) rotate(25deg) scale(0.7);
-    -webkit-animation: pic-rotate 3s;
-            animation: pic-rotate 3s;
     z-index: -1;
-  }
-  @-webkit-keyframes pic-rotate {
-    0% {
-      -webkit-transform: translateY(0) rotate(0deg) scale(1);
-              transform: translateY(0) rotate(0deg) scale(1);
-      z-index: -1;
-    }
-    100% {
-      -webkit-transform: translateY(10%) rotate(25deg) scale(0.7);
-              transform: translateY(10%) rotate(25deg) scale(0.7);
-      z-index: -1;
-    }
-  }
-  @keyframes pic-rotate {
-    0% {
-      -webkit-transform: translateY(0) rotate(0deg) scale(1);
-              transform: translateY(0) rotate(0deg) scale(1);
-      z-index: -1;
-    }
-    100% {
-      -webkit-transform: translateY(10%) rotate(25deg) scale(0.7);
-              transform: translateY(10%) rotate(25deg) scale(0.7);
-      z-index: -1;
-    }
+    -webkit-transition: 4s;
+    transition: 4s;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 420px) and (max-width: 768px) {
   .main {
     height: 100vh;
     width: 100%;
@@ -232,6 +214,7 @@
     line-height: 1.5rem;
     font-size: 1.2rem;
     z-index: 1;
+    text-shadow: 0px 0px 8px black;
   }
   .about figure {
     margin: 0;
@@ -247,35 +230,7 @@
     padding: 0;
     margin: 0;
     border-radius: 15px 15px;
-    -webkit-transform: translateY(10%) rotate(25deg) scale(0.7);
-            transform: translateY(10%) rotate(25deg) scale(0.7);
-    -webkit-animation: pic-rotate 3s;
-            animation: pic-rotate 3s;
     z-index: -1;
-  }
-  @-webkit-keyframes pic-rotate {
-    0% {
-      -webkit-transform: translateY(0) rotate(0deg) scale(1);
-              transform: translateY(0) rotate(0deg) scale(1);
-      z-index: -1;
-    }
-    100% {
-      -webkit-transform: translateY(10%) rotate(25deg) scale(0.7);
-              transform: translateY(10%) rotate(25deg) scale(0.7);
-      z-index: -1;
-    }
-  }
-  @keyframes pic-rotate {
-    0% {
-      -webkit-transform: translateY(0) rotate(0deg) scale(1);
-              transform: translateY(0) rotate(0deg) scale(1);
-      z-index: -1;
-    }
-    100% {
-      -webkit-transform: translateY(10%) rotate(25deg) scale(0.7);
-              transform: translateY(10%) rotate(25deg) scale(0.7);
-      z-index: -1;
-    }
   }
 }
 
@@ -303,6 +258,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-animation: head-slide 2s ease;
+            animation: head-slide 2s ease;
   }
   .main header :nth-child(1) {
     padding-right: 20px;
@@ -314,6 +271,8 @@
     height: 5vh;
     font-size: 3rem;
     font-weight: bold;
+    -webkit-animation: head-slide 2s .5s ease both;
+            animation: head-slide 2s .5s ease both;
   }
   .main button {
     position: absolute;
@@ -327,6 +286,15 @@
     font-weight: bold;
     background-color: #000;
     color: white;
+    cursor: pointer;
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-animation: head-slide 2s .7s ease both;
+            animation: head-slide 2s .7s ease both;
+  }
+  .main button:hover {
+    background-color: #fff;
+    color: black;
   }
   .main nav {
     position: absolute;
@@ -344,6 +312,22 @@
     font-size: 1.2rem;
     font-weight: bold;
   }
+  @-webkit-keyframes head-slide {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 12%;
+    }
+  }
+  @keyframes head-slide {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 12%;
+    }
+  }
   .about {
     height: 100vh;
     position: relative;
@@ -359,6 +343,8 @@
     left: 5%;
     font-size: 2.2rem;
     width: 50%;
+    z-index: 1;
+    text-shadow: 0 0 4px black;
   }
   .about .description {
     position: absolute;
@@ -366,6 +352,8 @@
     top: 50%;
     width: 50%;
     line-height: 2rem;
+    z-index: 1;
+    text-shadow: 0 0 4px black;
   }
   .about figure {
     margin: 0;
@@ -378,38 +366,15 @@
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
-  .about figure img {
+  .about figure .park-img {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
     border-radius: 15px 15px;
-    -webkit-animation: pic-rotate 3s both;
-            animation: pic-rotate 3s both;
-  }
-  @-webkit-keyframes pic-rotate {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      z-index: -1;
-    }
-    100% {
-      -webkit-transform: rotate(25deg);
-              transform: rotate(25deg);
-      z-index: -1;
-    }
-  }
-  @keyframes pic-rotate {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      z-index: -1;
-    }
-    100% {
-      -webkit-transform: rotate(25deg);
-              transform: rotate(25deg);
-      z-index: -1;
-    }
+    -webkit-transition: 3s;
+    transition: 3s;
+    z-index: -2;
   }
 }
 /*# sourceMappingURL=style.css.map */

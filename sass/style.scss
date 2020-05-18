@@ -12,13 +12,15 @@
   top: 2%;
   left: 2%;
 }
+.pic-animation{
+  transform: rotate(25deg);
+}
 
-
-@media (max-width: 399px) {
+@media (max-width: 419px) {
   @import "mobile-main";
   @import "mobile-about";
 }
-@media(max-width: 768px){
+@media (min-width:420px) and (max-width: 768px){
   @import "tablet-main";
   @import "tablet-about";
 }
