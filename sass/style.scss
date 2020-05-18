@@ -19,6 +19,10 @@
   transform: rotate(25deg);
 }
 
+.team{
+  height: 100vh;
+}
+
 @media (max-width: 419px) {
   @import "mobile-main";
   @import "mobile-about";
