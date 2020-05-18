@@ -1,3 +1,19 @@
+nav{
+  position: absolute;
+  top: 2%;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 50px;
+  }
+}
 .main {
   height: 100vh;
   width: 100%;
@@ -47,19 +63,7 @@
     background-color: #fff;
     color: black;
   }
-  nav{
-    position: absolute;
-    bottom: 2%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    a{
-      text-decoration: none;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-  }
+  
 }
 @keyframes head-slide{
   0%{

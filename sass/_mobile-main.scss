@@ -1,9 +1,13 @@
+nav{
+  display: none;
+}
 .main {
   height: 100vh;
   width: 100%;
   background: url(/img/bgc-mobile.jpg) no-repeat center center fixed;
   background-size: cover;
   color: white;
+  overflow-x: hidden;
   .logo {
     @include logo;
   }
@@ -13,6 +17,7 @@
     width: 100%;
     font-size: 2.5rem;
     height: 25vh;
+    animation: head-slide 2s ease;
     :nth-child(1) {
       position: absolute;
       left: 18%;
@@ -32,6 +37,7 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    animation: head-slide 2s .5s ease both;
   }
   button{
     position: absolute;
@@ -45,8 +51,15 @@
     font-size: 1rem;
     font-weight: bold;
     background-color: #fff;
+    
   }
-  nav{
-    display: none;
+ 
+}
+@keyframes head-slide{
+  0%{
+      left: -100%;
+  }
+  100%{
+      left: 0;
   }
 }

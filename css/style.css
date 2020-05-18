@@ -12,20 +12,32 @@
 }
 
 @media (max-width: 419px) {
+  nav {
+    display: none;
+  }
   .main {
     height: 100vh;
     width: 100%;
     background: url(/img/bgc-mobile.jpg) no-repeat center center fixed;
     background-size: cover;
     color: white;
+    overflow-x: hidden;
   }
   .main .logo {
     height: 4rem;
     width: 6rem;
-    text-align: center;
     position: absolute;
     top: 2%;
     left: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main header {
     position: absolute;
@@ -33,6 +45,8 @@
     width: 100%;
     font-size: 2.5rem;
     height: 25vh;
+    -webkit-animation: head-slide 2s ease;
+            animation: head-slide 2s ease;
   }
   .main header :nth-child(1) {
     position: absolute;
@@ -52,6 +66,8 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    -webkit-animation: head-slide 2s .5s ease both;
+            animation: head-slide 2s .5s ease both;
   }
   .main button {
     position: absolute;
@@ -67,8 +83,21 @@
     font-weight: bold;
     background-color: #fff;
   }
-  .main nav {
-    display: none;
+  @-webkit-keyframes head-slide {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  @keyframes head-slide {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
   }
   .about {
     height: 100vh;
@@ -125,6 +154,9 @@
 }
 
 @media (min-width: 420px) and (max-width: 768px) {
+  nav {
+    display: none;
+  }
   .main {
     height: 100vh;
     width: 100%;
@@ -135,10 +167,18 @@
   .main .logo {
     height: 4rem;
     width: 6rem;
-    text-align: center;
     position: absolute;
     top: 2%;
     left: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main header {
     position: absolute;
@@ -179,9 +219,6 @@
     font-size: 1rem;
     font-weight: bold;
     background-color: #fff;
-  }
-  .main nav {
-    display: none;
   }
   .about {
     height: 100vh;
@@ -235,6 +272,28 @@
 }
 
 @media (min-width: 769px) {
+  nav {
+    position: absolute;
+    top: 2%;
+    width: 100%;
+    height: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 50px;
+  }
   .main {
     height: 100vh;
     width: 100%;
@@ -244,10 +303,18 @@
   .main .logo {
     height: 4rem;
     width: 6rem;
-    text-align: center;
     position: absolute;
     top: 2%;
     left: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main header {
     position: absolute;
@@ -295,22 +362,6 @@
   .main button:hover {
     background-color: #fff;
     color: black;
-  }
-  .main nav {
-    position: absolute;
-    bottom: 2%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .main nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
   }
   @-webkit-keyframes head-slide {
     0% {
