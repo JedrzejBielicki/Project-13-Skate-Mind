@@ -11,149 +11,161 @@
           transform: rotate(25deg);
 }
 
-.team {
-  height: 100vh;
+nav {
+  display: none;
 }
 
-@media (max-width: 419px) {
-  nav {
-    display: none;
+.main {
+  height: 100vh;
+  width: 100%;
+  background: url(/img/bgc-mobile.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+.main .logo {
+  height: 4rem;
+  width: 6rem;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main header {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  font-size: 2.5rem;
+  height: 25vh;
+  -webkit-animation: head-slide 2s ease;
+          animation: head-slide 2s ease;
+}
+
+.main header :nth-child(1) {
+  position: absolute;
+  left: 18%;
+  top: 2%;
+}
+
+.main header :nth-child(2) {
+  position: absolute;
+  right: 18%;
+  bottom: 2%;
+}
+
+.main p {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  -webkit-animation: head-slide 2s 0.5s ease both;
+          animation: head-slide 2s 0.5s ease both;
+}
+
+.main button {
+  position: absolute;
+  bottom: 17%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: none;
+  border-radius: 15px 15px;
+  height: 7vh;
+  width: 45%;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.about {
+  height: 100vh;
+  background-image: url(/img/bgc-mobile-2.jpg);
+  color: lightgray;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.about header {
+  text-align: center;
+  height: 10vh;
+  position: relative;
+  width: 100%;
+}
+
+.about header h2 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  padding-top: 30px;
+}
+
+.about .description {
+  height: 30vh;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.3rem;
+  z-index: 1;
+  text-shadow: 0 0 8px black;
+  font-size: 0.7rem;
+  padding-top: 20px;
+}
+
+.about figure {
+  margin: 0;
+  padding: 0;
+  height: 34vh;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: -1;
+}
+
+.about figure .park-img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 15px 15px;
+  z-index: -1;
+  -webkit-transition: 4s;
+  transition: 4s;
+}
+
+@-webkit-keyframes head-slide {
+  0% {
+    left: -100%;
   }
-  .main {
-    height: 100vh;
-    width: 100%;
-    background: url(/img/bgc-mobile.jpg) no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    overflow-x: hidden;
+  100% {
+    left: 0;
   }
-  .main .logo {
-    height: 4rem;
-    width: 6rem;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+}
+
+@keyframes head-slide {
+  0% {
+    left: -100%;
   }
-  .main header {
-    position: absolute;
-    top: 25%;
-    width: 100%;
-    font-size: 2.5rem;
-    height: 25vh;
-    -webkit-animation: head-slide 2s ease;
-            animation: head-slide 2s ease;
-  }
-  .main header :nth-child(1) {
-    position: absolute;
-    left: 18%;
-    top: 2%;
-  }
-  .main header :nth-child(2) {
-    position: absolute;
-    right: 18%;
-    bottom: 2%;
-  }
-  .main p {
-    position: absolute;
-    top: 60%;
-    width: 100%;
-    height: 5vh;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    -webkit-animation: head-slide 2s .5s ease both;
-            animation: head-slide 2s .5s ease both;
-  }
-  .main button {
-    position: absolute;
-    bottom: 17%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    border: none;
-    border-radius: 15px 15px;
-    height: 7vh;
-    width: 45%;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #fff;
-  }
-  @-webkit-keyframes head-slide {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 0;
-    }
-  }
-  @keyframes head-slide {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 0;
-    }
-  }
-  .about {
-    height: 100vh;
-    background-image: url(/img/bgc-mobile-2.jpg);
-    color: lightgray;
-    position: relative;
-    z-index: -2;
-    overflow: hidden;
-  }
-  .about header {
-    text-align: center;
-    height: 10vh;
-    position: relative;
-    width: 100%;
-  }
-  .about header h2 {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 100%;
-  }
-  .about .description {
-    height: 30vh;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.3rem;
-    z-index: 1;
-    text-shadow: 0 0 8px black;
-  }
-  .about figure {
-    margin: 0;
-    padding: 0;
-    height: 34vh;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-    z-index: -1;
-  }
-  .about figure .park-img {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-radius: 15px 15px;
-    z-index: -1;
-    -webkit-transition: 4s;
-    transition: 4s;
+  100% {
+    left: 0;
   }
 }
 
@@ -161,35 +173,8 @@
   nav {
     display: none;
   }
-  .main {
-    height: 100vh;
-    width: 100%;
-    background: url(/img/bgc-mobile.jpg) no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-  }
-  .main .logo {
-    height: 4rem;
-    width: 6rem;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .main header {
-    position: absolute;
-    top: 25%;
-    width: 100%;
-    font-size: 2.5rem;
-    height: 25vh;
+  .main header h1 {
+    font-size: 5rem;
   }
   .main header :nth-child(1) {
     position: absolute;
@@ -202,76 +187,22 @@
     bottom: 2%;
   }
   .main p {
-    position: absolute;
-    top: 60%;
-    width: 100%;
-    height: 5vh;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+    -webkit-animation: head-slide 2s 0.5s ease both;
+            animation: head-slide 2s 0.5s ease both;
   }
   .main button {
-    position: absolute;
-    bottom: 17%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    border: none;
-    border-radius: 15px 15px;
-    height: 7vh;
-    width: 45%;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #fff;
-  }
-  .about {
-    height: 100vh;
-    background-image: url(/img/bgc-mobile-2.jpg);
-    color: lightgray;
-    position: relative;
-    z-index: -2;
-    overflow: hidden;
+    font-size: 2rem;
   }
   .about header {
-    text-align: center;
     height: 15vh;
-    position: relative;
-    width: 100%;
-  }
-  .about header h2 {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 100%;
   }
   .about .description {
-    height: 30vh;
-    width: 85%;
-    margin: 0 auto;
-    text-align: center;
     line-height: 1.5rem;
     font-size: 1.2rem;
-    z-index: 1;
-    text-shadow: 0px 0px 8px black;
   }
   .about figure {
-    margin: 0;
-    padding: 0;
     height: 60vh;
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-  }
-  .about figure img {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-radius: 15px 15px;
-    z-index: -1;
+    bottom: -100px;
   }
 }
 
