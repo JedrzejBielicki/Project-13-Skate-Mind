@@ -15,6 +15,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .pic-animation {
   transform: rotate(25deg);
 }
@@ -22,6 +23,7 @@
 nav {
   display: none;
 }
+
 .main {
   height: 100vh;
   width: 100%;
@@ -29,27 +31,36 @@ nav {
   background-size: cover;
   color: white;
   overflow-x: hidden;
+
   .logo {
     @include logo;
   }
+
   header {
     position: absolute;
     top: 25%;
     width: 100%;
-    font-size: 2.5rem;
     height: 25vh;
     animation: head-slide 2s ease;
+    font-size: 2.5rem;
+
     :nth-child(1) {
       position: absolute;
       left: 18%;
       top: 2%;
     }
+
     :nth-child(2) {
       position: absolute;
       right: 18%;
       bottom: 2%;
     }
+
+    h1 {
+      font-size: 3.5rem;
+    }
   }
+
   p {
     position: absolute;
     top: 60%;
@@ -60,6 +71,7 @@ nav {
     font-weight: bold;
     animation: head-slide 2s 0.5s ease both;
   }
+
   button {
     position: absolute;
     bottom: 17%;
@@ -74,6 +86,7 @@ nav {
     background-color: #fff;
   }
 }
+
 .about {
   height: 100vh;
   background-image: url(/img/bgc-mobile-2.jpg);
@@ -81,11 +94,15 @@ nav {
   position: relative;
   z-index: -2;
   overflow: hidden;
+
   header {
     text-align: center;
     height: 10vh;
     position: relative;
     width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+
     h2 {
       display: block;
       position: absolute;
@@ -96,6 +113,7 @@ nav {
       padding-top: 30px;
     }
   }
+
   .description {
     height: 30vh;
     width: 80%;
@@ -107,15 +125,17 @@ nav {
     font-size: 0.7rem;
     padding-top: 20px;
   }
+
   figure {
     margin: 0;
     padding: 0;
     height: 34vh;
     position: absolute;
-    bottom: 0;
+    bottom: 12%;
     left: 50%;
     transform: translate(-50%);
     z-index: -1;
+
     .park-img {
       width: 100%;
       padding: 0;
@@ -127,50 +147,108 @@ nav {
   }
 }
 
+.team {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(/img/bgc-mobile-2.jpg);
+  z-index: -2;
+
+  .background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 200%;
+    font-size: 8rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    z-index: 1;
+  }
+
+  .background-text::before {
+    content: "Skate Mind";
+  }
+
+
+  .background-text::after {
+    content: "Skate Mind";
+  }
+
+  header {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+
+    h2 {
+      line-height: 10vh;
+      font-size: 2rem;
+    }
+  }
+
+  .team-photo {
+    height: 40vh;
+    width: 40%;
+  }
+}
+
 @keyframes head-slide {
   0% {
     left: -100%;
   }
+
   100% {
     left: 0;
   }
 }
 
+
+
 @media (min-width: 420px) and (max-width: 768px) {
   nav {
     display: none;
   }
+
   .main {
     header {
       h1 {
         font-size: 5rem;
       }
+
       :nth-child(1) {
         position: absolute;
         left: 22%;
         top: 2%;
       }
+
       :nth-child(2) {
         position: absolute;
         right: 22%;
         bottom: 2%;
       }
     }
+
     p {
       animation: head-slide 2s 0.5s ease both;
     }
+
     button {
       font-size: 2rem;
     }
   }
+
   .about {
     header {
       height: 15vh;
     }
+
     .description {
       line-height: 1.5rem;
       font-size: 1.2rem;
     }
+
     figure {
       height: 60vh;
       bottom: -100px;
@@ -179,6 +257,171 @@ nav {
 }
 
 @media (min-width: 769px) {
-  @import "desktop-main";
-  @import "desktop-about";
+  nav {
+    position: absolute;
+    top: 2%;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0 50px;
+    }
+  }
+
+  .main {
+    height: 100vh;
+    width: 100%;
+    background: url(/img/bgc.jpg) no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    color: black;
+
+    .logo {
+      @include logo;
+    }
+
+    header {
+      position: absolute;
+      top: 25%;
+      left: 12%;
+      width: 60%;
+      height: 25vh;
+      animation: head-slide 2s ease;
+      display: flex;
+      justify-content: start;
+      align-items: flex-end;
+
+      :nth-child(1) {
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+
+      :nth-child(2) {
+        position: relative;
+        left: 5%;
+        top: 0;
+      }
+
+      h1 {
+        font-size: 5rem;
+      }
+    }
+
+
+    p {
+      position: absolute;
+      top: 60%;
+      left: 12%;
+      width: 60%;
+      height: 5vh;
+      text-align: start;
+      font-size: 2rem;
+      font-weight: bold;
+      animation: head-slide 2s 0.5s ease both;
+    }
+
+    button {
+      position: absolute;
+      bottom: 17%;
+      left: 12%;
+      transform: translateX(0);
+      border: none;
+      border-radius: 15px 15px;
+      height: 7vh;
+      width: 25%;
+      background-color: black;
+      color: white;
+      font-size: 1.5rem;
+      animation: head-slide 2s 0.7s ease both;
+    }
+
+    button:hover {
+      background-color: #fff;
+      color: black;
+    }
+  }
+
+  .about {
+
+
+    background-image: linear-gradient(to right top, #000000, #070707, #0d0d0d, #121212, #161616);
+
+
+    header {
+      position: absolute;
+      top: 17%;
+      left: 5%;
+      font-size: 2.2rem;
+      width: 50%;
+      z-index: 1;
+      text-shadow: 0 0 4px black;
+      text-align: start;
+    }
+
+    .description {
+      position: absolute;
+      left: 5%;
+      top: 45%;
+      width: 40%;
+      line-height: 2rem;
+      z-index: 1;
+      text-shadow: 0 0 4px black;
+      font-size: 1rem;
+      text-align: start;
+    }
+
+    figure {
+      height: 55vh;
+      width: 55vh;
+      top: 50%;
+      left: 55%;
+      transform: translateY(-50%);
+
+
+      .park-img {
+        height: 100%;
+
+
+
+        z-index: -2;
+      }
+
+
+
+    }
+  }
+
+
+  @keyframes head-slide {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 12%;
+    }
+  }
+}
+
+@media(max-width: 768px) and (orientation: landscape) {
+  .main {
+    header {
+      h1 {
+        font-size: 3rem;
+      }
+
+    }
+
+    button {
+      font-size: 1rem;
+    }
+  }
 }

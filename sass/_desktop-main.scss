@@ -1,4 +1,4 @@
-nav{
+nav {
   position: absolute;
   top: 2%;
   width: 100%;
@@ -6,7 +6,8 @@ nav{
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  a{
+
+  a {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
@@ -14,36 +15,53 @@ nav{
     padding: 0 50px;
   }
 }
+
 .main {
   height: 100vh;
   width: 100%;
   background: url(/img/bgc.jpg) no-repeat center center fixed;
   background-size: cover;
+
   .logo {
     @include logo;
   }
+
   header {
     position: absolute;
     top: 40%;
     left: 12%;
-    font-size: 3.5rem;
+    width: 100%;
+    font-size: 1rem;
     height: 25vh;
     display: flex;
-    :nth-child(1){
-      padding-right: 20px;
-    }
+
     animation: head-slide 2s ease;
+
+    :nth-child(1) {
+      position: absolute;
+      left: 18%;
+      top: 2%;
+    }
+
+    :nth-child(2) {
+      position: absolute;
+      right: 18%;
+      bottom: 2%;
+    }
   }
-  p{
+
+  p {
     position: absolute;
     top: 57%;
     left: 12%;
     height: 5vh;
     font-size: 3rem;
     font-weight: bold;
-    animation: head-slide 2s .5s ease both;
+    animation: head-slide 2s 0.5s ease both;
+    text-align: start;
   }
-  button{
+
+  .learn-more {
     position: absolute;
     bottom: 17%;
     left: 12%;
@@ -57,19 +75,21 @@ nav{
     color: white;
     cursor: pointer;
     transition: 1s;
-    animation: head-slide 2s .7s ease both;
+    animation: head-slide 2s 0.7s ease both;
   }
-  button:hover{
+
+  button:hover {
     background-color: #fff;
     color: black;
   }
-  
 }
-@keyframes head-slide{
-  0%{
-      left: -100%;
+
+@keyframes head-slide {
+  0% {
+    left: -100%;
   }
-  100%{
-      left: 12%;
+
+  100% {
+    left: 12%;
   }
 }

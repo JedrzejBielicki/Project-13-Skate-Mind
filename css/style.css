@@ -45,10 +45,10 @@ nav {
   position: absolute;
   top: 25%;
   width: 100%;
-  font-size: 2.5rem;
   height: 25vh;
   -webkit-animation: head-slide 2s ease;
           animation: head-slide 2s ease;
+  font-size: 2.5rem;
 }
 
 .main header :nth-child(1) {
@@ -61,6 +61,10 @@ nav {
   position: absolute;
   right: 18%;
   bottom: 2%;
+}
+
+.main header h1 {
+  font-size: 3.5rem;
 }
 
 .main p {
@@ -104,6 +108,8 @@ nav {
   height: 10vh;
   position: relative;
   width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .about header h2 {
@@ -134,7 +140,7 @@ nav {
   padding: 0;
   height: 34vh;
   position: absolute;
-  bottom: 0;
+  bottom: 12%;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -149,6 +155,53 @@ nav {
   z-index: -1;
   -webkit-transition: 4s;
   transition: 4s;
+}
+
+.team {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(/img/bgc-mobile-2.jpg);
+  z-index: -2;
+}
+
+.team .background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  width: 200%;
+  font-size: 8rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  z-index: 1;
+}
+
+.team .background-text::before {
+  content: "Skate Mind";
+}
+
+.team .background-text::after {
+  content: "Skate Mind";
+}
+
+.team header {
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.team header h2 {
+  line-height: 10vh;
+  font-size: 2rem;
+}
+
+.team .team-photo {
+  height: 40vh;
+  width: 40%;
 }
 
 @-webkit-keyframes head-slide {
@@ -234,6 +287,8 @@ nav {
     width: 100%;
     background: url(/img/bgc.jpg) no-repeat center center fixed;
     background-size: cover;
+    overflow: hidden;
+    color: black;
   }
   .main .logo {
     height: 4rem;
@@ -253,50 +308,103 @@ nav {
   }
   .main header {
     position: absolute;
-    top: 40%;
+    top: 25%;
     left: 12%;
-    font-size: 3.5rem;
+    width: 60%;
     height: 25vh;
+    -webkit-animation: head-slide 2s ease;
+            animation: head-slide 2s ease;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-animation: head-slide 2s ease;
-            animation: head-slide 2s ease;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .main header :nth-child(1) {
-    padding-right: 20px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .main header :nth-child(2) {
+    position: relative;
+    left: 5%;
+    top: 0;
+  }
+  .main header h1 {
+    font-size: 5rem;
   }
   .main p {
     position: absolute;
-    top: 57%;
+    top: 60%;
     left: 12%;
+    width: 60%;
     height: 5vh;
-    font-size: 3rem;
+    text-align: start;
+    font-size: 2rem;
     font-weight: bold;
-    -webkit-animation: head-slide 2s .5s ease both;
-            animation: head-slide 2s .5s ease both;
+    -webkit-animation: head-slide 2s 0.5s ease both;
+            animation: head-slide 2s 0.5s ease both;
   }
   .main button {
     position: absolute;
     bottom: 17%;
     left: 12%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     border: none;
     border-radius: 15px 15px;
     height: 7vh;
     width: 25%;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #000;
+    background-color: black;
     color: white;
-    cursor: pointer;
-    -webkit-transition: 1s;
-    transition: 1s;
-    -webkit-animation: head-slide 2s .7s ease both;
-            animation: head-slide 2s .7s ease both;
+    font-size: 1.5rem;
+    -webkit-animation: head-slide 2s 0.7s ease both;
+            animation: head-slide 2s 0.7s ease both;
   }
   .main button:hover {
     background-color: #fff;
     color: black;
+  }
+  .about {
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#000000), color-stop(#070707), color-stop(#0d0d0d), color-stop(#121212), to(#161616));
+    background-image: linear-gradient(to right top, #000000, #070707, #0d0d0d, #121212, #161616);
+  }
+  .about header {
+    position: absolute;
+    top: 17%;
+    left: 5%;
+    font-size: 2.2rem;
+    width: 50%;
+    z-index: 1;
+    text-shadow: 0 0 4px black;
+    text-align: start;
+  }
+  .about .description {
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    width: 40%;
+    line-height: 2rem;
+    z-index: 1;
+    text-shadow: 0 0 4px black;
+    font-size: 1rem;
+    text-align: start;
+  }
+  .about figure {
+    height: 55vh;
+    width: 55vh;
+    top: 50%;
+    left: 55%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .about figure .park-img {
+    height: 100%;
+    z-index: -2;
   }
   @-webkit-keyframes head-slide {
     0% {
@@ -314,53 +422,14 @@ nav {
       left: 12%;
     }
   }
-  .about {
-    height: 100vh;
-    position: relative;
-    padding: 0;
-    margin: 0;
-    background-image: -webkit-gradient(linear, left bottom, right top, from(#000000), color-stop(#070707), color-stop(#0d0d0d), color-stop(#121212), to(#161616));
-    background-image: linear-gradient(to right top, #000000, #070707, #0d0d0d, #121212, #161616);
-    color: white;
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .main header h1 {
+    font-size: 3rem;
   }
-  .about header {
-    position: absolute;
-    top: 17%;
-    left: 5%;
-    font-size: 2.2rem;
-    width: 50%;
-    z-index: 1;
-    text-shadow: 0 0 4px black;
-  }
-  .about .description {
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    width: 50%;
-    line-height: 2rem;
-    z-index: 1;
-    text-shadow: 0 0 4px black;
-  }
-  .about figure {
-    margin: 0;
-    padding: 0;
-    height: 50vh;
-    width: 50vh;
-    position: absolute;
-    top: 50%;
-    right: 7%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-  .about figure .park-img {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-radius: 15px 15px;
-    -webkit-transition: 3s;
-    transition: 3s;
-    z-index: -2;
+  .main button {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
