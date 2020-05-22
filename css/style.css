@@ -220,6 +220,77 @@ nav {
   text-align: justify;
 }
 
+.team .team-mario {
+  opacity: 0;
+  -webkit-animation: team-slider 21s infinite both;
+          animation: team-slider 21s infinite both;
+}
+
+.team .team-tina {
+  opacity: 0;
+  -webkit-animation: team-slider 21s 7s infinite both;
+          animation: team-slider 21s 7s infinite both;
+}
+
+.team .team-tony {
+  opacity: 0;
+  -webkit-animation: team-slider 21s 14s infinite both;
+          animation: team-slider 21s 14s infinite both;
+}
+
+.map {
+  height: 100vh;
+  position: relative;
+  background-image: url(/img/bgc-mobile-2.jpg);
+  color: white;
+}
+
+.map h2 {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
+
+.map .map-iframe {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80%;
+}
+
+@-webkit-keyframes team-slider {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+@keyframes team-slider {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes head-slide {
   0% {
     left: -100%;
@@ -475,6 +546,9 @@ nav {
     padding: 25px 0;
     font-size: 1.2rem;
     line-height: 3rem;
+  }
+  .map h2 {
+    font-size: 3rem;
   }
   @-webkit-keyframes head-slide {
     0% {
