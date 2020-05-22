@@ -167,14 +167,7 @@ nav {
     z-index: 1;
   }
 
-  .background-text::before {
-    content: "Skate Mind";
-  }
 
-
-  .background-text::after {
-    content: "Skate Mind";
-  }
 
   header {
     height: 10vh;
@@ -189,9 +182,35 @@ nav {
   }
 
   .team-photo {
-    height: 40vh;
-    width: 40%;
+    height: 60vh;
+    width: 40vh;
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
   }
+
+  .team-description {
+    color: white;
+    z-index: 2;
+    position: absolute;
+    bottom: 4%;
+    text-align: center;
+
+
+    p {
+      font-size: .9rem;
+      padding-right: 15px;
+      padding-left: 15px;
+      text-align: justify;
+    }
+  }
+
 }
 
 @keyframes head-slide {
@@ -254,11 +273,25 @@ nav {
       bottom: -100px;
     }
   }
+
+  .team {
+    .team-description {
+      bottom: 11%;
+      padding-left: 100px;
+      padding-right: 100px;
+      font-size: 2rem;
+
+      p {
+        font-size: 1rem;
+
+      }
+    }
+  }
 }
 
 @media (min-width: 769px) {
   nav {
-    position: absolute;
+    position: fixed;
     top: 2%;
     width: 100%;
     height: 4rem;
@@ -399,6 +432,52 @@ nav {
     }
   }
 
+  .team {
+    header {
+      display: none;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .team-photo {
+      grid-column: 1;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      img {
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+    }
+
+    .team-description {
+      grid-column: 2;
+      height: 60vh;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      padding: 0;
+      text-align: start;
+
+      h2 {
+        font-size: 6rem;
+      }
+
+      p {
+        width: 70%;
+        margin: 0;
+        padding: 25px 0;
+        font-size: 1.2rem;
+        line-height: 3rem;
+      }
+    }
+  }
+
 
   @keyframes head-slide {
     0% {
@@ -422,6 +501,53 @@ nav {
 
     button {
       font-size: 1rem;
+    }
+  }
+
+  .team {
+    header {
+      display: none;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .team-photo {
+      grid-column: 1;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      img {
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+    }
+
+    .team-description {
+      grid-column: 2;
+      height: 60vh;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      padding: 0;
+      text-align: start;
+
+      h2 {
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+
+      }
+
+      p {
+        width: 80%;
+        padding: 0;
+        margin: 0;
+      }
     }
   }
 }
