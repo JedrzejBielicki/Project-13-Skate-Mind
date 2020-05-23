@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
 
 .pic-animation {
   -webkit-transform: rotate(25deg);
-  transform: rotate(25deg);
+          transform: rotate(25deg);
 }
 
 nav {
@@ -34,11 +34,11 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main header {
@@ -47,7 +47,7 @@ nav {
   width: 100%;
   height: 25vh;
   -webkit-animation: head-slide 2s ease;
-  animation: head-slide 2s ease;
+          animation: head-slide 2s ease;
   font-size: 2.5rem;
 }
 
@@ -76,7 +76,7 @@ nav {
   font-size: 1.5rem;
   font-weight: bold;
   -webkit-animation: head-slide 2s 0.5s ease both;
-  animation: head-slide 2s 0.5s ease both;
+          animation: head-slide 2s 0.5s ease both;
 }
 
 .main button {
@@ -84,7 +84,7 @@ nav {
   bottom: 17%;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   border: none;
   border-radius: 15px 15px;
   height: 7vh;
@@ -118,7 +118,7 @@ nav {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 100%;
   padding-top: 30px;
 }
@@ -143,7 +143,7 @@ nav {
   bottom: 12%;
   left: 50%;
   -webkit-transform: translate(-50%);
-  transform: translate(-50%);
+          transform: translate(-50%);
   z-index: -1;
 }
 
@@ -170,7 +170,7 @@ nav {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-  transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
   width: 200%;
   font-size: 8rem;
   font-weight: bold;
@@ -214,7 +214,7 @@ nav {
 }
 
 .team .team-description p {
-  font-size: 0.9rem;
+  font-size: .9rem;
   padding-right: 15px;
   padding-left: 15px;
   text-align: justify;
@@ -223,19 +223,19 @@ nav {
 .team .team-mario {
   opacity: 0;
   -webkit-animation: team-slider 18s infinite both;
-  animation: team-slider 18s infinite both;
+          animation: team-slider 18s infinite both;
 }
 
 .team .team-tina {
   opacity: 0;
   -webkit-animation: team-slider 18s 6s infinite both;
-  animation: team-slider 18s 6s infinite both;
+          animation: team-slider 18s 6s infinite both;
 }
 
 .team .team-tony {
   opacity: 0;
   -webkit-animation: team-slider 18s 12s infinite both;
-  animation: team-slider 18s 12s infinite both;
+          animation: team-slider 18s 12s infinite both;
 }
 
 .map {
@@ -256,7 +256,7 @@ nav {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   height: 80vh;
   width: 80%;
 }
@@ -314,14 +314,7 @@ footer {
   line-height: 4vh;
   text-align: center;
   font-family: sans-serif;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(black),
-    color-stop(50%, #3e3e3e),
-    to(black)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(50%, #3e3e3e), to(black));
   background: linear-gradient(90deg, black 0%, #3e3e3e 50%, black 100%);
   color: white;
   margin: 0;
@@ -347,7 +340,7 @@ footer {
   }
   .main p {
     -webkit-animation: head-slide 2s 0.5s ease both;
-    animation: head-slide 2s 0.5s ease both;
+            animation: head-slide 2s 0.5s ease both;
   }
   .main button {
     font-size: 2rem;
@@ -385,11 +378,11 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   nav a {
     text-decoration: none;
@@ -416,11 +409,11 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main header {
     position: absolute;
@@ -429,16 +422,16 @@ footer {
     width: 60%;
     height: 25vh;
     -webkit-animation: head-slide 2s ease;
-    animation: head-slide 2s ease;
+            animation: head-slide 2s ease;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .main header :nth-child(1) {
     position: relative;
@@ -463,14 +456,14 @@ footer {
     font-size: 2rem;
     font-weight: bold;
     -webkit-animation: head-slide 2s 0.5s ease both;
-    animation: head-slide 2s 0.5s ease both;
+            animation: head-slide 2s 0.5s ease both;
   }
   .main button {
     position: absolute;
     bottom: 17%;
     left: 12%;
     -webkit-transform: translateX(0);
-    transform: translateX(0);
+            transform: translateX(0);
     border: none;
     border-radius: 15px 15px;
     height: 7vh;
@@ -479,31 +472,15 @@ footer {
     color: white;
     font-size: 1.5rem;
     -webkit-animation: head-slide 2s 0.7s ease both;
-    animation: head-slide 2s 0.7s ease both;
+            animation: head-slide 2s 0.7s ease both;
   }
   .main button:hover {
     background-color: #fff;
     color: black;
   }
   .about {
-    background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      right top,
-      from(#000000),
-      color-stop(#070707),
-      color-stop(#0d0d0d),
-      color-stop(#121212),
-      to(#161616)
-    );
-    background-image: linear-gradient(
-      to right top,
-      #000000,
-      #070707,
-      #0d0d0d,
-      #121212,
-      #161616
-    );
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#000000), color-stop(#070707), color-stop(#0d0d0d), color-stop(#121212), to(#161616));
+    background-image: linear-gradient(to right top, #000000, #070707, #0d0d0d, #121212, #161616);
   }
   .about header {
     position: absolute;
@@ -532,7 +509,7 @@ footer {
     top: 50%;
     left: 55%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .about figure .park-img {
     height: 100%;
@@ -541,8 +518,8 @@ footer {
   .team {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .team header {
     display: none;
@@ -553,14 +530,14 @@ footer {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .team .team-photo img {
     display: block;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .team .team-description {
     -ms-grid-column: 2;
@@ -568,7 +545,7 @@ footer {
     height: 60vh;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
     margin: 0;
     padding: 0;
     text-align: start;
@@ -614,8 +591,8 @@ footer {
   .team {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .team header {
     display: none;
@@ -626,14 +603,14 @@ footer {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .team .team-photo img {
     display: block;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .team .team-description {
     -ms-grid-column: 2;
@@ -641,7 +618,7 @@ footer {
     height: 60vh;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
     margin: 0;
     padding: 0;
     text-align: start;
