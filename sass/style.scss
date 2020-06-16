@@ -5,6 +5,8 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+
+
 @mixin logo {
   height: 4rem;
   width: 6rem;
@@ -289,6 +291,15 @@ footer {
   color: white;
   margin: 0;
   padding: 0;
+  position: relative;
+
+  img {
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5px;
+  }
 
 }
 
