@@ -94,6 +94,11 @@ nav {
   background-color: #fff;
 }
 
+.main button a {
+  text-decoration: none;
+  color: black;
+}
+
 .about {
   height: 100vh;
   background-image: url(/img/bgc-mobile-2.JPG);
