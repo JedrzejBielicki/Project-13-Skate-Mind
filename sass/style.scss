@@ -18,6 +18,57 @@
   justify-content: center;
 }
 
+.preloader {
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  position: fixed;
+  z-index: 7;
+
+  .preloader__text {
+    font-size: 2rem;
+    color: white;
+    display: block;
+    font-family: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  .preloader__logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  .preloader__logo img {
+    height: 100px;
+    width: 37px;
+  }
+
+  .preloader__text--up {
+    transition: 1s;
+    transform: translate(-50%, -150%);
+    color: white;
+
+
+  }
+
+}
+
+.preloader--up {
+  animation: fade-out .5s ease-out 1s both;
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 .pic-animation {
   transform: rotate(25deg);
 }
